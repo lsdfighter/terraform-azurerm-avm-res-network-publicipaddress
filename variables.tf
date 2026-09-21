@@ -210,8 +210,8 @@ variable "sku" {
   description = "The SKU of the public IP address."
 
   validation {
-    condition     = can(regex("^(Basic|Standard)$", var.sku))
-    error_message = "The SKU must be either 'Basic' or 'Standard'."
+    condition     = can(regex("^(Basic|Standard|StandardV2)$", var.sku))
+    error_message = "The SKU must be either 'Basic', 'Standard' or 'StandardV2'."
   }
 }
 
